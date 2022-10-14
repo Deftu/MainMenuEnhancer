@@ -1,5 +1,3 @@
-import xyz.unifycraft.gradle.utils.GameSide
-
 plugins {
     java
     kotlin("jvm") version("1.6.10")
@@ -17,7 +15,7 @@ unifycraft {
 }
 
 loomHelper {
-    useArgument("--tweakClass", "gg.essential.loader.stage0.EssentialSetupTweaker", GameSide.CLIENT)
+    useTweaker("gg.essential.loader.stage0.EssentialSetupTweaker")
     useForgeMixin(modData.id)
     useMixinRefMap(modData.id)
 }
@@ -28,8 +26,4 @@ repositories {
 
 dependencies {
     compileOnly("org.spongepowered:mixin:0.8.5-SNAPSHOT")
-    /*compileOnly(fileTree(mapOf(
-        "dir" to "libs",
-        "include" to listOf("*.jar")
-    )))*/
 }
