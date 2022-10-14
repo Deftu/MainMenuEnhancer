@@ -1,0 +1,9 @@
+{
+    "required": true,
+    "package": "xyz.deftu.mme.mixins",
+    "compatibilityLevel": "JAVA_8",
+    "mixins": [
+        "GuiMainMenuMixin_Blur",
+        "GuiMainMenuMixin_Gradient"
+    ]
+}
